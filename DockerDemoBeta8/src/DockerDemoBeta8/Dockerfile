@@ -1,5 +1,5 @@
 ﻿FROM microsoft/aspnet:latest
-COPY . /app
+COPY DockerDemoBeta8/src/DockerDemoBeta8 /app
 WORKDIR /app
 RUN ["dnu", "restore"]
 
