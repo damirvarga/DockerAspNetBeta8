@@ -1,4 +1,4 @@
-﻿FROM microsoft/aspnet:latest
+﻿FROM microsoft/aspnet
 COPY DockerDemoBeta8/src/DockerDemoBeta8 /app
 WORKDIR /app
 RUN ["dnu", "restore"]
