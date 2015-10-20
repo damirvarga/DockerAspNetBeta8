@@ -1,7 +1,7 @@
-﻿FROM microsoft/aspnet
-COPY DockerDemoBeta8/src/DockerDemoBeta8 /app
-WORKDIR /app
-RUN ["dnu", "restore"]
+FROM microsoft/aspnet:1.0.0-beta8
 
-EXPOSE 5004
-ENTRYPOINT ["dnx", ".", "kestrel"]
+ADD . /app
+
+WORKDIR /app
+
+ENTRYPOINT ["./kestrel"]
